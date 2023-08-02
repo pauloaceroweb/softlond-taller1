@@ -49,6 +49,18 @@ public class Main {
                     Ejercicio6 claseNum = new Ejercicio6();
                     claseNum.claseNumero();
                     break;
+
+                case 7:
+                    JOptionPane.showMessageDialog(null,"Ejercicio 7 \n" + "Tabla de Multiplicar");
+                    Ejercicio7 ejercicio7 = new Ejercicio7();
+                    ejercicio7.tablaMulti();
+                    break;
+
+                case 8:
+                    JOptionPane.showMessageDialog(null,"Ejercicio 8 \n" + "Juego adivinar número");
+                    Ejercicio8 ejercicio8 = new Ejercicio8();
+                    ejercicio8.adivinarNumero();
+                    break;
             }
 
         } while (opcion != 0);
