@@ -14,10 +14,10 @@ public class Ejercicio9 {
     public void factorial() {
         setNumero();
         if (numero > 0){
-            int fact = numero;
+            int fact = 1;
 
-            for (int i = 1; i < numero; i++){
-                fact = fact * i;
+            for (int i = 1; i <= numero; i++){
+                fact *= i;
             }
             JOptionPane.showMessageDialog(null, "El factorial de: " + numero + " es igual a: " + fact);
         } else {
