@@ -39,7 +39,7 @@ public class Ejercicio8 {
                 JOptionPane.showMessageDialog(null, "Ingresa un número entero positivo");
             }
 
-        }while (numeroAdivinar != numUsuario);
+        } while (numeroAdivinar != numUsuario);
         JOptionPane.showMessageDialog(null, "Felicitaciones!!! \n"
                 + "Has acertado el número es: \n"
                 + numeroAdivinar

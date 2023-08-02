@@ -61,6 +61,12 @@ public class Main {
                     Ejercicio8 ejercicio8 = new Ejercicio8();
                     ejercicio8.adivinarNumero();
                     break;
+
+                case 9:
+                    JOptionPane.showMessageDialog(null,"Ejercicio 9 \n" + "Factorial de un número dado");
+                    Ejercicio9 ejercicio9 = new Ejercicio9();
+                    ejercicio9.factorial();
+                    break;
             }
 
         } while (opcion != 0);
