@@ -1,6 +1,4 @@
-import Taller1.Ejercicio1;
-import Taller1.Ejercicio2;
-import Taller1.Ejercicio3;
+import Taller1.*;
 
 import javax.swing.*;
 
@@ -32,6 +30,24 @@ public class Main {
                     JOptionPane.showMessageDialog(null,"Ejercicio 3 \n" + "Área y Perímetro del Círculo");
                     Ejercicio3 areaPerimetro = new Ejercicio3();
                     areaPerimetro.areaPerimetro();
+                    break;
+
+                case 4:
+                    JOptionPane.showMessageDialog(null,"Ejercicio 4 \n" + "Menor o Mayor de edad");
+                    Ejercicio4 edad = new Ejercicio4();
+                    edad.edad();
+                    break;
+
+                case 5:
+                    JOptionPane.showMessageDialog(null,"Ejercicio 5 \n" + "Número Mayor");
+                    Ejercicio5 numMayor = new Ejercicio5();
+                    numMayor.numeroMayor();
+                    break;
+
+                case 6:
+                    JOptionPane.showMessageDialog(null,"Ejercicio 6 \n" + "Positivo, Negativo o Cero");
+                    Ejercicio6 claseNum = new Ejercicio6();
+                    claseNum.claseNumero();
                     break;
             }
 
