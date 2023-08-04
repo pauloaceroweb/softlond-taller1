@@ -11,14 +11,16 @@ public class Ejercicio10 {
 
     public void fibonacci() {
         int numero = 20;
-        int a = 0, b = 1, c;
-        String aux = "";
+        int num1 = 0;
+        int num2 = 1;
+        StringBuilder serie = new StringBuilder();
         for (int i = 0; i < numero; i++) {
-            aux += a + ", ";
-            c = a + b;
-            a = b;
-            b = c;
+            serie.append(num1).append(", ");
+            int siguiente = num1 + num2;
+            num1 = num2;
+            num2 = siguiente;
         }
-        JOptionPane.showMessageDialog(null, "La serie Fibonacci de " + numero + " elementos es: \n" + aux);
+        JOptionPane.showMessageDialog(null, "La serie Fibonacci de " + numero + " elementos es: \n" + serie);
     }
+
 }

@@ -12,23 +12,22 @@ public class Ejercicio15 {
         int numero = Integer.parseInt(input);
 
         if (esNumeroCapicua(numero)) {
-            JOptionPane.showMessageDialog(null, numero + " es un número capicúa.");
+            JOptionPane.showMessageDialog(null, "El número " + numero + ", ES Capicúa.");
         } else {
-            JOptionPane.showMessageDialog(null, numero + " no es un número capicúa.");
+            JOptionPane.showMessageDialog(null, "El número " + numero + ", NO es Capicúa.");
         }
     }
 
-    // Función para verificar si un número es capicúa
     public boolean esNumeroCapicua(int numero) {
-        int numeroReverso = 0;
+        int numeroInverso = 0;
         int original = numero;
 
         while (numero != 0) {
             int digito = numero % 10;
-            numeroReverso = numeroReverso * 10 + digito;
+            numeroInverso = (numeroInverso) * 10 + digito;
             numero /= 10;
         }
 
-        return original == numeroReverso;
+        return original == numeroInverso;
     }
 }

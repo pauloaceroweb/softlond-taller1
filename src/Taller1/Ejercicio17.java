@@ -7,26 +7,28 @@ public class Ejercicio17 {
     que se encuentran en ese rango.*/
 
     public void run() {
-        String input1 = JOptionPane.showInputDialog("Ingrese el primer número entero:");
-        int numero1 = Integer.parseInt(input1);
+        int numeroInicial = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número inicial del rango:"));
+        int numeroFinal = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número final del rango:"));
 
-        String input2 = JOptionPane.showInputDialog("Ingrese el segundo número entero:");
-        int numero2 = Integer.parseInt(input2);
+        JOptionPane.showMessageDialog(null, "Números primos en el rango [" + numeroInicial + ", "
+                + numeroFinal + "]:\n" + obtenerPrimosEnRango(numeroInicial, numeroFinal));
+    }
 
-        if (numero1 <= numero2) {
-            System.out.println("Números primos en el rango de " + numero1 + " a " + numero2 + ":");
-            for (int i = numero1; i <= numero2; i++) {
-                if (esPrimo(i)) {
-                    System.out.print(i + " ");
-                }
+    // Función para obtener los números primos en un rango dado
+    public String obtenerPrimosEnRango(int numeroInicial, int numeroFinal) {
+        StringBuilder primos = new StringBuilder();
+
+        for (int numero = numeroInicial; numero <= numeroFinal; numero++) {
+            if (esNumeroPrimo(numero)) {
+                primos.append(numero).append(" ");
             }
-        } else {
-            JOptionPane.showMessageDialog(null, "El primer número debe ser menor o igual al segundo número.");
         }
+
+        return primos.toString();
     }
 
     // Función para verificar si un número es primo
-    public boolean esPrimo(int numero) {
+    public boolean esNumeroPrimo(int numero) {
         if (numero <= 1) {
             return false;
         }
@@ -39,4 +41,5 @@ public class Ejercicio17 {
 
         return true;
     }
+
 }

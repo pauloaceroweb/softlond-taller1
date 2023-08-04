@@ -60,7 +60,7 @@ public class Main {
                     ejercicio9.factorial();
                 }
                 case 10 -> {
-                    JOptionPane.showMessageDialog(null, "Ejercicio 10 \n" + "Serie de Fibonacci de un número dado");
+                    JOptionPane.showMessageDialog(null, "Ejercicio 10 \n" + "Serie de Fibonacci de 20 elementos");
                     Ejercicio10 ejercicio10 = new Ejercicio10();
                     ejercicio10.fibonacci();
                 }
@@ -78,6 +78,26 @@ public class Main {
                     JOptionPane.showMessageDialog(null, "Ejercicio 13 \n" + "Redondear número en decimales dados");
                     Ejercicio13 ejercicio13 = new Ejercicio13();
                     ejercicio13.decimales();
+                }
+                case 14 -> {
+                    JOptionPane.showMessageDialog(null, "Ejercicio 14 \n" + "Número Perfecto");
+                    Ejercicio14 ejercicio14 = new Ejercicio14();
+                    ejercicio14.run();
+                }
+                case 15 -> {
+                    JOptionPane.showMessageDialog(null, "Ejercicio 15 \n" + "Número Capicúa");
+                    Ejercicio15 ejercicio15 = new Ejercicio15();
+                    ejercicio15.run();
+                }
+                case 16 -> {
+                    JOptionPane.showMessageDialog(null, "Ejercicio 16 \n" + "Fibonacci de número dado");
+                    Ejercicio16 ejercicio16 = new Ejercicio16();
+                    ejercicio16.run();
+                }
+                case 17 -> {
+                    JOptionPane.showMessageDialog(null, "Ejercicio 17 \n" + "Números primos de un rango");
+                    Ejercicio17 ejercicio17 = new Ejercicio17();
+                    ejercicio17.run();
                 }
 
             }
