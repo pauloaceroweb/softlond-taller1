@@ -17,7 +17,7 @@ public class Main {
                 case 1 -> {
                     JOptionPane.showMessageDialog(null, "Ejercicio 1 \n" + "Calculadora");
                     Ejercicio1 cal = new Ejercicio1();
-                    cal.operaciones();
+                    cal.calculadora();
                 }
                 case 2 -> {
                     JOptionPane.showMessageDialog(null, "Ejercicio 2 \n" + "Par o Impar");
@@ -47,7 +47,7 @@ public class Main {
                 case 7 -> {
                     JOptionPane.showMessageDialog(null, "Ejercicio 7 \n" + "Tabla de Multiplicar");
                     Ejercicio7 ejercicio7 = new Ejercicio7();
-                    ejercicio7.tablaMulti();
+                    ejercicio7.tablaMultiplicar();
                 }
                 case 8 -> {
                     JOptionPane.showMessageDialog(null, "Ejercicio 8 \n" + "Juego adivinar número");
@@ -69,6 +69,17 @@ public class Main {
                     Ejercicio11 ejercicio11 = new Ejercicio11();
                     ejercicio11.areaHeron();
                 }
+                case 12 -> {
+                    JOptionPane.showMessageDialog(null, "Ejercicio 12 \n" + "Número Primo");
+                    Ejercicio12 ejercicio12 = new Ejercicio12();
+                    ejercicio12.primo();
+                }
+                case 13 -> {
+                    JOptionPane.showMessageDialog(null, "Ejercicio 13 \n" + "Redondear número en decimales dados");
+                    Ejercicio13 ejercicio13 = new Ejercicio13();
+                    ejercicio13.decimales();
+                }
+
             }
 
         } while (opcion != 0);

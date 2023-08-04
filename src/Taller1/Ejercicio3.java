@@ -7,24 +7,28 @@ public class Ejercicio3 {
     /*Crea un programa que calcule y muestre el área y el perímetro de un círculo.
     El usuario debe proporcionar el radio del círculo.*/
 
-    private double radio;
+    public void areaPerimetro() {
+        String input = JOptionPane.showInputDialog("Ingrese el radio del círculo:");
+        double radio = Double.parseDouble(input);
 
-    public void setNumero() {
-        this.radio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio del círculo"));
+        if (radio <= 0) {
+            JOptionPane.showMessageDialog(null, "El radio debe ser un valor positivo.");
+        } else {
+            double area = areaCirculo(radio);
+            double perimetro = perimetroCirculo(radio);
+
+            String mensaje = "Área del círculo: " + area + "\n";
+            mensaje += "Perímetro del círculo: " + perimetro;
+
+            JOptionPane.showMessageDialog(null, mensaje);
+        }
     }
 
-    public void areaPerimetro() {
-        setNumero();
-        if (radio > 0 ) {
-            double pi = 3.1416;
-            double area = 2 * radio * pi;
-            double perimetro = pi * Math.pow(radio, 2);
-            JOptionPane.showMessageDialog(null,
-                    "El área del Círculo es: " + area + "\n"
-                            + "El perímetro del Círculo es: " + perimetro
-            );
-        } else {
-            JOptionPane.showMessageDialog(null, "Ingrese un valor entero positivo");
-        }
+    public double areaCirculo(double radio) {
+        return Math.PI * radio * radio;
+    }
+
+    public double perimetroCirculo(double radio) {
+        return 2 * Math.PI * radio;
     }
 }

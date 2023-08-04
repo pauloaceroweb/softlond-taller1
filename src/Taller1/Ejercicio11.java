@@ -13,22 +13,24 @@ public class Ejercicio11 {
       El Area: area = raiz(s * ((s-a)*(s-b)*(s-c)))
     */
 
-    private int a;
-    private int b;
-    private int c;
+    public void areaHeron() {
+        double a = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud del lado A: "));
+        double b = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud del lado B: "));
+        double c = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la longitud del lado C: "));
 
-    public void setLados() {
-        this.a = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la longitud del lado A: "));
-        this.b = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la longitud del lado B: "));
-        this.c = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la longitud del lado C: "));
+        if ((a + b > c) && (b + c > a) && (a + c > b)) {
+            double area = calcularAreaHeron(a, b, c);
+            DecimalFormat df = new DecimalFormat("#.##");
+            String roundedArea = df.format(area);
+            JOptionPane.showMessageDialog(null, "El área del triángulo de lados ("+a+", "+b+", "+c+") es: " + roundedArea);
+        } else {
+            JOptionPane.showMessageDialog(null, "Lados del triángulo inválidos. " +
+                    "\nLa suma de dos lados cualquiera debe ser mayor que la longitud del tercer lado.");
+        }
     }
 
-    public void areaHeron() {
-        setLados();
-        double s = (double) (a + b + c) /2; // s es el Semiperímetro
-        double area = Math.sqrt(s * ((s-a)*(s-b)*(s-c)));
-        DecimalFormat df = new DecimalFormat("#.##");
-        String roundedArea = df.format(area);
-        JOptionPane.showMessageDialog(null, "El área del triángulo de lados ("+a+", "+b+", "+c+") es: " + roundedArea);
+    public double calcularAreaHeron(double a, double b, double c) {
+        double s = (a + b + c) /2; // s es el Semiperímetro
+        return Math.sqrt(s * ((s-a)*(s-b)*(s-c)));
     }
 }

@@ -10,25 +10,26 @@ public class Ejercicio8 {
     El programa debe indicar si el número ingresado es mayor o menor que el número a adivinar.
     */
 
-    int numeroAdivinar = ThreadLocalRandom.current().nextInt(1,101);
-
-    private int numUsuario;
-
-    public void setNumUsuario() {
-        this.numUsuario = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número a adivinar"));
-    }
-
     public void adivinarNumero() {
-        do {
-            setNumUsuario();
+        int numeroAdivinar = ThreadLocalRandom.current().nextInt(1,101);
+
+        while (true) {
+            int numUsuario = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número a adivinar"));
+
             if (numUsuario > 0) {
-                if (numeroAdivinar > numUsuario) {
+                if (numUsuario == numeroAdivinar) {
+                    JOptionPane.showMessageDialog(null, "Felicitaciones!!! \n"
+                            + "Has acertado el número es: \n"
+                            + numeroAdivinar
+                    );
+                    break;
+                } else if (numeroAdivinar > numUsuario) {
                     JOptionPane.showMessageDialog(null,
                             "El número " + numUsuario
                                     + "\nEs MENOR que el número a adivinar\n"
                                     + "Aumenta!!!"
                     );
-                } else if (numeroAdivinar < numUsuario){
+                } else {
                     JOptionPane.showMessageDialog(null,
                             "El número " + numUsuario
                                     + "\nEs MAYOR que el número a adivinar\n"
@@ -38,11 +39,6 @@ public class Ejercicio8 {
             } else {
                 JOptionPane.showMessageDialog(null, "Ingresa un número entero positivo");
             }
-
-        } while (numeroAdivinar != numUsuario);
-        JOptionPane.showMessageDialog(null, "Felicitaciones!!! \n"
-                + "Has acertado el número es: \n"
-                + numeroAdivinar
-        );
+        }
     }
 }

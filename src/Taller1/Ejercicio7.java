@@ -6,23 +6,23 @@ public class Ejercicio7 {
     /*Crea un programa que pida al usuario un número entero positivo y muestre su tabla de multiplicar hasta el 10.
      */
 
-    private int numTabla;
+    public void tablaMultiplicar() {
+        String input = JOptionPane.showInputDialog("Ingrese el número de la tabla");
+        int numTabla = Integer.parseInt(input);
 
-    public void setNumTabla() {
-        this.numTabla = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número de la tabla"));
+        if (numTabla <= 0) {
+            JOptionPane.showMessageDialog(null, "Debe ingresar un número entero positivo.");
+        } else {
+            tabla(numTabla);
+        }
     }
 
-    public void tablaMulti() {
-        setNumTabla();
-        if (numTabla > 0) {
-            String aux = "";
-            for (int i = 1; i <= 10; i++){
-                aux+=i + " X " + numTabla + " = " + numTabla * i + "\n";
-            }
-            JOptionPane.showMessageDialog(null, "La tabla de Multiplicar del " + numTabla + " es: \n" + aux);
-        } else {
-            JOptionPane.showMessageDialog(null, "Ingrese un número entero positivo");
+    public void tabla(int numTabla) {
+        String tabla = "Tabla de multiplicar del " + numTabla + ":\n";
+        for (int i = 1; i <= 10; i++) {
+            tabla += numTabla + " x " + i + " = " + (numTabla * i) + "\n";
         }
+        JOptionPane.showMessageDialog(null, tabla);
     }
 
 }
